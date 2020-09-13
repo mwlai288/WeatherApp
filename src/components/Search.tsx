@@ -10,7 +10,7 @@ const SearchCity = () => {
 
   const searchCity = async (search: string): Promise<[]> => {
     const res = await axios.get(
-      `http://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=${process.env.REACT_APP_WEATHER_KEY}&units=imperial`
+      `https://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=${process.env.REACT_APP_WEATHER_KEY}&units=imperial`
     );
 
     dispatch({
@@ -23,7 +23,7 @@ const SearchCity = () => {
 
   const getForecast = async (search: string): Promise<[]> => {
     const forecastData = await axios.get(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${search}&APPID=${process.env.REACT_APP_WEATHER_KEY}&units=imperial`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${search}&APPID=${process.env.REACT_APP_WEATHER_KEY}&units=imperial`
     );
 
     dispatch({
